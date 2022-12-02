@@ -1,22 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
+import headshot from './DanielHeadshot.jpg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={headshot} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Official Daniel Baranov website coming soon!
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://github.com/danieldbaranov"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Be there or be 🟦
         </a>
       </header>
     </div>
