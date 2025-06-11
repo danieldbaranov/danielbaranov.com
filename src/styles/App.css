@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+
+
+
+h1 {
+  font-size: 64px;
+  font-style: 'normal';
+  font-weight: 700;
+
+}
+
+h2 {
+  font-size: 48px;
+  font-variant: 'normal';
+  font-weight: 500;
+}
+
+h1, h2, h3 {
+  font-family: "Libre Baskerville", serif;
+}
+
+p {
+  font-size: 1.25rem;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.full-page{
+  width: 80vw;
+  height: 80vh;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  padding-right: 10vw;
+  padding-left: 10vw;
+  border: 3px solid red;
+  flex-wrap: wrap;
+}
+
+.about-picture{
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  object-fit: cover;
+  flex: 1 1 40%;
+  max-height: 40vh;
+}
+
+.about-text{
+  flex: 1 1 60%;
+}

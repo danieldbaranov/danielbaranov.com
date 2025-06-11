@@ -24,8 +24,11 @@
   },
   "dependencies": {
     "@babel/preset-env": "^7.27.2",
+    "fs": "^0.0.1-security",
     "process": "^0.11.10",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-router": "^7.6.0",
+    "react-router-dom": "^7.6.0"
   }
 }

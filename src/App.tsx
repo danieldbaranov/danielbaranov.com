@@ -1,34 +1,78 @@
 import React from 'react';
-import './App.css';
+import './styles/App.css';
 
-let PUBLIC_URL = '../public'
+import Home from './Home';
+import About from './About';
+import Projects from './Projects';
+import Contacts from './Contacts';
 
-function App() {
-  return (
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect, useRef } from 'react';
+
+import { Link } from "react-router-dom";
+
+function FullPage(){
+  return(
     <div className="App">
-      <header className="App-header">
-        <img src={'/DanielHeadshot.jpg'} className="App-logo" alt="logo" />
-        <div>
-            <p>
-                The official website of Daniel Baranov.
-            </p>
-            <div className={"logo-bar"}>
-                <a href="https://github.com/danieldbaranov">
-                    <img
-                        src={'/githublogo.png'} alt={"github"}
-                        className={"portfolio-logo"}
-                    />
-                </a>
-                <a href="https://www.linkedin.com/in/danielbaranov">
-                    <img src="/linkedinlogo.png" alt={"linkedin"}
-                         className={"portfolio-logo"}/>
-                </a>
-            </div>
-
-        </div>
-      </header>
+      <nav style={{ 
+        position: "fixed", 
+        top: 0, 
+        width: "100%", 
+        zIndex: '1000', 
+        display: 'flex', 
+        justifyContent: 'space-evenly', 
+        gap: '20px'
+      }}>
+        <Link to="/">
+          <p>
+            Home
+          </p>
+        </Link>
+        <Link to="/about">
+          <p>
+            About
+          </p>
+        </Link>
+        <Link to="/contact">
+          <p>
+            Contact
+          </p>
+        </Link>
+      </nav>
+      <Home/>
+      <About/>
+      <Contacts/>
     </div>
   );
 }
 
+function App() {
+
+  const sections: Record<string, string> = {
+    "/": "home",
+    "/about": "about",
+    "/contact": "contact"
+  };
+
+  const location = useLocation();
+
+  useEffect(() => {
+    const id = sections[location.pathname];
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({behavior: "smooth"});
+    }
+  }, [location.pathname]);
+
+
+  return (
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<FullPage/>} />
+        <Route path="/about" element={<FullPage/>} />
+        <Route path="/contact" element={<FullPage/>} />
+      </Routes>
+    </div>
+  );
+}
 export default App;
