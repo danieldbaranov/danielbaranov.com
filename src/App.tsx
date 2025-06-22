@@ -24,17 +24,17 @@ function FullPage(){
         gap: '20px'
       }}>
         <Link to="/">
-          <p>
+          <p data-avoid-ascii="true">
             Home
           </p>
         </Link>
         <Link to="/about">
-          <p>
+          <p data-avoid-ascii="true">
             About
           </p>
         </Link>
         <Link to="/contact">
-          <p>
+          <p data-avoid-ascii="true">
             Contact
           </p>
         </Link>

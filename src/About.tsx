@@ -4,10 +4,10 @@ import './styles/App.css'
 function About () {
   return(
     <div id="about" className="full-page" style={{display: "flex", flexDirection: 'row', justifyContent: 'center', alignItems: 'stretch', gap: '5%'}}>
-      <div>
+      <div style={{display: "flex", justifyItems: "center"}}>
         <img src="./DanielHeadshot.jpg" className='about-picture'/>
       </div>
-      <div className='about-text'>
+      <div className='about-text' data-avoid-ascii="true">
         <h1>About me</h1>
         <p>
           Hi, I'm Daniel Baranov. 
