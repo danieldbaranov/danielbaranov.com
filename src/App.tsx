@@ -10,6 +10,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
 
 import { Link } from "react-router-dom";
+import { Color } from 'three';
 
 function FullPage(){
   return(
@@ -21,19 +22,19 @@ function FullPage(){
         zIndex: '1000', 
         display: 'flex', 
         justifyContent: 'space-evenly', 
-        gap: '20px'
+        gap: '20px',
       }}>
-        <Link to="/">
+        <Link to="/" style={{color: "black"}}>
           <p data-avoid-ascii="true">
             Home
           </p>
         </Link>
-        <Link to="/about">
+        <Link to="/about" style={{color: "black"}}>
           <p data-avoid-ascii="true">
             About
           </p>
         </Link>
-        <Link to="/contact">
+        <Link to="/contact" style={{color: "black"}}>
           <p data-avoid-ascii="true">
             Contact
           </p>

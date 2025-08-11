@@ -12,7 +12,7 @@ interface AsciiBackgroundProps {
 const AsciiBackground: React.FC<AsciiBackgroundProps> = ({
     asciiChars = ' .:/\[]{}()<>*+-=!?#&$@'.split(''),
     fontSize = 16, // pixels
-    bgColor = '#F5F5DC', // Light Beige background for the canvas itself
+    bgColor = '#FFFFFF', // Light Beige background for the canvas itself
     updateInterval = 100, // ms, how often to update characters
     avoidSelector = '[data-avoid-ascii="true"]',
     avoidPadding = 10 // default padding
@@ -73,7 +73,7 @@ const AsciiBackground: React.FC<AsciiBackgroundProps> = ({
                 grid: Array.from({ length: rows }, () =>
                     Array.from({ length: cols }, () => ({
                         char: asciiChars[Math.floor(Math.random() * asciiChars.length)],
-                        opacity: Math.random(),
+                        opacity: Math.random() * 0.2,
                     }))
                 ),
                 cols,
@@ -100,7 +100,7 @@ const AsciiBackground: React.FC<AsciiBackgroundProps> = ({
                     if (grid[r]?.[c]) {
                         grid[r][c] = {
                             char: asciiChars[Math.floor(Math.random() * asciiChars.length)],
-                            opacity: Math.random(),
+                            opacity: Math.random() * 0.2,
                         };
                     }
                 }

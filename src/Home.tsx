@@ -13,7 +13,7 @@ function Home () {
           <br/>
           <span data-avoid-ascii="true">Daniel Baranov</span>
         </h1>
-        <h2 data-avoid-ascii="true">I create <em>human-focused</em> systems</h2>
+        {/* <h2 data-avoid-ascii="true">I make machines <i>learn.</i></h2> */}
       </div>
     </section>
   );
