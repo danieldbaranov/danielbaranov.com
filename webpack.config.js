@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const webpack = require('webpack')
 
@@ -26,6 +27,13 @@ module.exports = {
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[name][ext]'
+        }
       }
     ],
   },
@@ -35,6 +43,17 @@ module.exports = {
     }),
     new webpack.ProvidePlugin({
       process: 'process/browser.js',
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { 
+          from: 'public', 
+          to: './',
+          globOptions: {
+            ignore: ['**/index.html'] // Don't copy index.html if webpack generates it
+          }
+        }
+      ]
     })
   ],
   devServer: {

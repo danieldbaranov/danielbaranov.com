@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles/App.css'
 
-import headshot from '../public/DanielHeadshot.jpg';
+import headshot from './assets/DanielHeadshot.jpg';
 
 function About() {
   return (

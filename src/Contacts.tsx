@@ -1,8 +1,8 @@
 import React from 'react';
 import './styles/App.css'
 
-import github from '../public/githublogo.png';
-import linkedin from '../public/linkedinlogo.png';
+import github from './assets/githublogo.png';
+import linkedin from './assets/linkedinlogo.png';
 
 
 function Contacts() {
