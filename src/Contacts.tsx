@@ -1,6 +1,10 @@
 import React from 'react';
 import './styles/App.css'
 
+import github from '../public/githublogo.png';
+import linkedin from '../public/linkedinlogo.png';
+
+
 function Contacts() {
   return (
     <section id="contact" className="full-page" style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
@@ -10,13 +14,13 @@ function Contacts() {
       <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly' }}>
         <a href="https://github.com/danieldbaranov">
           <img data-avoid-ascii="true"
-            src={'./githublogo.png'} alt={"github"}
+            src={github} alt={"github"}
             className={"portfolio-logo"}
           />
         </a>
         <a href="https://www.linkedin.com/in/danielbaranov">
           <img data-avoid-ascii="true"
-            src={'./linkedinlogo.png'} alt={"linkedin"}
+            src={linkedin} alt={"linkedin"}
             className={"portfolio-logo"} />
         </a>
       </div>

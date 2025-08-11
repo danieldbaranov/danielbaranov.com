@@ -1,11 +1,13 @@
 import React from 'react';
 import './styles/App.css'
 
-function About () {
-  return(
-    <div id="about" className="full-page" style={{display: "flex", flexDirection: 'row', justifyContent: 'center', alignItems: 'stretch', gap: '5%'}}>
-      <div style={{display: "flex", justifyItems: "center"}}>
-        <img src="./DanielHeadshot.jpg" className='about-picture' alt=""/>
+import headshot from '../public/DanielHeadshot.jpg';
+
+function About() {
+  return (
+    <div id="about" className="full-page" style={{ display: "flex", flexDirection: 'row', justifyContent: 'center', alignItems: 'stretch', gap: '5%' }}>
+      <div style={{ display: "flex", justifyItems: "center" }}>
+        <img src={headshot} className='about-picture' alt="" />
       </div>
       <div className='about-text' data-avoid-ascii="true">
         <h1>About me</h1>
