@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/stylesheet.css" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "@id": "https://danielbaranov.com/blog/#blog",
+        "url": "https://danielbaranov.com/blog/",
+        "name": "Blog",
+        "publisher": {
+          "@id": "https://danielbaranov.com/#person"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <main class="container">
+      $include-before$
+      <h1>Blog</h1>
+      <ul class="post-list">
+        $for(posts)$
+        <li>
+          <time datetime="$it.datePublished$">$it.datePublished$</time>
+          —
+          <a href="$it.url$">$it.title$</a>
+        </li>
+        $endfor$
+      </ul>
+    </main>
+  </body>
+</html>

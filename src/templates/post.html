@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>$title$</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    $if(description)$
+    <meta name="description" content="$description$" />
+    $endif$
+
+    $if(canonical)$
+    <link rel="canonical" href="$canonical$" />
+    $endif$
+
+    <link rel="stylesheet" href="/css/stylesheet.css" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+    <!-- Blog post structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "@id": "$canonical$#article",
+      "headline": "$title$",
+      "datePublished": "$datePublished$",
+      "dateModified": "$dateModified$",
+      "author": {
+        "@id": "$author.url$/#person"
+      },
+      "publisher": {
+        "@id": "$author.url$/#person"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "$canonical$"
+      }
+    }
+    </script>
+  </head>
+
+  <body>
+    <main class="container">
+      $include-before$
+
+      <article>
+        <header>
+          <h1>$title$</h1>
+
+          $if(datePublished)$
+          <p class="meta">
+            <time datetime="$datePublished$">$datePublished$</time>
+          </p>
+          $endif$
+        </header>
+
+        $body$
+      </article>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+author:
+  name: "Daniel Baranov"
+  description: "Software engineer and AI researcher."
+  url: "https://danielbaranov.com"
+  profiles:
+    - name: LinkedIn
+      url: "https://www.linkedin.com/in/danielbaranov/"
+    - name: GitHub
+      url: "https://github.com/danieldbaranov"

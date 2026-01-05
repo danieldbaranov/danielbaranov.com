@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>$author.name$</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    $if(description)$
+    <meta name="description" content="$description$" />
+    $endif$ $if(canonical)$
+    <link rel="canonical" href="$canonical$" />
+    $endif$
+    <link rel="stylesheet" href="/css/stylesheet.css" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "$author.url$/#person",
+            "name": "$author.name$",
+            "url": "$author.url$/",
+            "sameAs": [
+              $for(author.profiles)$"$it.url$"$sep$, $endfor$
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "$author.url$/#website",
+            "url": "$author.url$/",
+            "name": "$author.name$",
+            "publisher": {
+              "@id": "$author.url$/#person"
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <main class="container">
+      $include-before$
+      <header>
+        <h1>$title$</h1>
+      </header>
+      $body$
+      <h2 id="profiles">Find me here:</h2>
+      <ul>
+        $for(author.profiles)$
+        <li><a href="$it.url$" target="_blank" rel="noopener">$it.name$</a></li>
+        $endfor$
+      </ul>
+    </main>
+  </body>
+</html>

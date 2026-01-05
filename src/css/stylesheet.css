@@ -1,0 +1,51 @@
+body {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: system-ui, serif;
+  font-feature-settings: "liga", "kern";
+  text-rendering: optimizeLegibility;
+}
+
+
+:root {
+  --accent: #1b5448;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration-color: var(--accent);
+  text-decoration: wavy underline;
+}
+
+pre {
+  background: lightgray;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+nav {
+  margin: auto;
+}
+
+nav a {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+h2, h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  font-weight: bold;
+}
