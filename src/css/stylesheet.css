@@ -3,10 +3,8 @@ body {
   margin: 2rem auto;
   padding: 0 1rem;
   font-family: system-ui, serif;
-  font-feature-settings: "liga", "kern";
-  text-rendering: optimizeLegibility;
+  line-height: 1.45;
 }
-
 
 :root {
   --accent: #1b5448;
@@ -48,4 +46,9 @@ h2, h3 {
   margin-block-end: 1em;
   margin-inline-start: 0px;
   font-weight: bold;
+}
+
+
+.ascii {
+  background-color: white;
 }

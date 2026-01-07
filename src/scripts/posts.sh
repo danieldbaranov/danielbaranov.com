@@ -14,6 +14,7 @@ for file in src/content/posts/*.md; do
     --to=html5 \
     -M canonical=$BASE_URL/blog/$name/ \
     --metadata-file=src/metadata.yaml \
+    --lua-filter=src/filters/create-figure.lua \
     -o "public/blog/$name/index.html"
 
     pandoc "$file" \
